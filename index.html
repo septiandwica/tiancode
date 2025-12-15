@@ -53,6 +53,14 @@
         background-size: 56px 56px;
         mask-image: radial-gradient(ellipse at center, rgba(0,0,0,.9) 30%, transparent 70%);
       }
+      @keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
     </style>
   </head>
 
@@ -160,49 +168,66 @@
             </div>
 
             <!-- Right card: mini stats / social proof -->
-            <div class="lg:col-span-5">
-              <div class="glass rounded-3xl p-6 shadow-soft">
-                <p class="text-sm font-semibold">Dipercaya untuk kebutuhan digital</p>
-                <p class="text-xs text-white/65 mt-1">
-                  Tambahkan logo klien kamu di sini untuk meningkatkan kepercayaan.
-                </p>
+           <div class="lg:col-span-5">
+  <div class="glass rounded-3xl p-6 shadow-soft">
+    <p class="text-sm font-semibold">Dipercaya untuk kebutuhan digital</p>
+    <p class="text-xs text-white/65 mt-1">
+      Digunakan oleh personal brand, UMKM, hingga startup di Indonesia.
+    </p>
 
-                <div class="mt-5 grid grid-cols-3 gap-3">
-                  <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
-                    <p class="text-lg font-bold text-blue-200">Fast</p>
-                    <p class="text-xs text-white/60 mt-1">Optimized load</p>
-                  </div>
-                  <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
-                    <p class="text-lg font-bold text-blue-200">SEO</p>
-                    <p class="text-xs text-white/60 mt-1">Basic setup</p>
-                  </div>
-                  <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
-                    <p class="text-lg font-bold text-blue-200">Secure</p>
-                    <p class="text-xs text-white/60 mt-1">SSL + best practice</p>
-                  </div>
-                </div>
+    <!-- STATS -->
+    <div class="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+        <p class="text-lg font-bold text-blue-300">50+</p>
+        <p class="text-xs text-white/60 mt-1">Project Selesai</p>
+      </div>
+      <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+        <p class="text-lg font-bold text-blue-300">4.9/5</p>
+        <p class="text-xs text-white/60 mt-1">Client Rating</p>
+      </div>
+      <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+        <p class="text-lg font-bold text-blue-300">&lt;10 mnt</p>
+        <p class="text-xs text-white/60 mt-1">Avg Response</p>
+      </div>
+      <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+        <p class="text-lg font-bold text-blue-300">99%</p>
+        <p class="text-xs text-white/60 mt-1">Client Retention</p>
+      </div>
+    </div>
 
-                <!-- Placeholder client logos -->
-                <div class="mt-6 grid grid-cols-2 gap-3">
-                  <div class="h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xs text-white/55">
-                    Logo Client A
-                  </div>
-                  <div class="h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xs text-white/55">
-                    Logo Client B
-                  </div>
-                  <div class="h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xs text-white/55">
-                    Logo Client C
-                  </div>
-                  <div class="h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xs text-white/55">
-                    Logo Client D
-                  </div>
-                </div>
+    <!-- LOGO MARQUEE -->
+    <div class="relative mt-6 overflow-hidden">
+      <div class="flex gap-4 animate-marquee whitespace-nowrap">
+        <!-- Logo Item -->
+        <div class="h-12 min-w-[120px] rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xs text-white/55">
+          Client A
+        </div>
+        <div class="h-12 min-w-[120px] rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xs text-white/55">
+          Client B
+        </div>
+        <div class="h-12 min-w-[120px] rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xs text-white/55">
+          Client C
+        </div>
+        <div class="h-12 min-w-[120px] rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xs text-white/55">
+          Client D
+        </div>
+        <!-- duplicate for seamless loop -->
+        <div class="h-12 min-w-[120px] rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xs text-white/55">
+          Client A
+        </div>
+        <div class="h-12 min-w-[120px] rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xs text-white/55">
+          Client B
+        </div>
+      </div>
+    </div>
 
-                <div class="mt-6 text-xs text-white/55">
-                  *Contoh: “50+ project”, “rating 4.9/5”, atau “response time < 10 menit”.
-                </div>
-              </div>
-            </div>
+    <!-- TRUST NOTE -->
+    <p class="mt-4 text-xs text-white/55">
+      ✔ Kontrak & invoice tersedia • ✔ Akses admin & handover lengkap • ✔ Support aktif via WhatsApp
+    </p>
+  </div>
+</div>
+
           </div>
         </section>
       </div>
